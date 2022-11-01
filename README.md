@@ -5,8 +5,10 @@
 
 
 [개발도구]
+
 ⚫ HW
   ◼ 라즈베리파 4B, 카메라 센서, 노트북
+
 ⚫ SW
   ◼ 임베디드 시스템 : Linux OS, Raspberry Pi OS, Python kafka ◼ 모바일 웹 개발 : Python Django, Bootstrap
   ◼ 모델 개발 : YOLOv5, Tensorflow
