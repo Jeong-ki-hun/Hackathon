@@ -1,0 +1,19 @@
+<head>
+    <meta http-equiv="refresh" content="5"> ##새로고침  5초
+
+
+
+    {% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+    <p>현재 인원 : {{ question.question_text }}</p>
+
+
+    <p>기준시간  : {{ question.pub_date }}</p>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No ob are available.</p>
+{% endif %}
+
+</head>
