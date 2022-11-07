@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import Http404
-from .models import Question, ShopList
+from .models import Question, ShopList, SeoulTable
 
 
 def index(request):
@@ -11,3 +11,8 @@ def index(request):
 def shop_list(request):
     data = ShopList.objects.all()
     return render(request, 'ob/index_3.html', {'data' : data})
+
+def map(request):
+    seoul = SeoulTable.objects.all()
+    return render(request,'ob/map.html',{'seoul':seoul})
+  

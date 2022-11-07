@@ -164,3 +164,12 @@ class ShopList(models.Model):
     class Meta:
         managed = False
         db_table = 'shop_list'
+
+class SeoulTable(models.Model):
+    name = models.CharField(max_length=255, blank=True, null=True)
+    x = models.CharField(max_length=255, blank=True, null=True)
+    y = models.CharField(max_length=255, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'seoul_table'
