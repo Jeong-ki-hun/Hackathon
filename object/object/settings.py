@@ -80,8 +80,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'onjiuvur',
         'USER': 'onjiuvur',
-        'PASSWORD': 'DW_pu23aYvbJVc1Z70sBaGjzobEs3tw2',
-        'HOST': 'rosie.db.elephantsql.com',
+        'PASSWORD': '9MDhITxF84TAukDM1_lqTc9y_Zko7wOx',
+        'HOST': 'rajje.db.elephantsql.com',
         'PORT': 5432,
     }
 }
