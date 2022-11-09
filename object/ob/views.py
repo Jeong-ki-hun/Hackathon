@@ -6,7 +6,7 @@ import json
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:1]
     context = {'latest_question_list': latest_question_list}
-    return render(request, 'ob/index.html', context)
+    return render(request, 'ob/index_5.html', context)
 
 def shop_list(request):
     data = ShopList.objects.all()
@@ -27,4 +27,6 @@ def map(request):
 
     seoul = json.dumps(seoul_t, ensure_ascii=False)
     return render(request,'ob/map.html',{'seoul':seoul})
-  
+
+def Dashborad(request):
+    return render(request,'ob/Dash/index.html')
