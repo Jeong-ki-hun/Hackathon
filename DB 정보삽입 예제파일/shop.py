@@ -10,7 +10,7 @@ image = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2PEmk8XMQeqxjL8
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxe8NPjwBIWJVdkW9iKp6oaWL3Duh2GZJQCA&usqp=CAU',
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEzdkc1EWiAFJtVPqEL3ApgEbf54NL7hiFEA&usqp=CAU']
 
-con = psycopg2.connect(host='rosie.db.elephantsql.com',dbname="mkzljolf", user="mkzljolf", password="y8SJDcZX-NC4_i13HjH2CunYCnWMbNiC",port=5432)
+con = psycopg2.connect(host='rajje.db.elephantsql.com',dbname="onjiuvur", user="onjiuvur", password="9MDhITxF84TAukDM1_lqTc9y_Zko7wOx",port=5432)
 
 cur = con.cursor()
 

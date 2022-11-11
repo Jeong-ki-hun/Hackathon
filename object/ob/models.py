@@ -173,3 +173,23 @@ class SeoulTable(models.Model):
     class Meta:
         managed = False
         db_table = 'seoul_table'
+
+class RestTable(models.Model):
+    label =  models.CharField(max_length=255, blank=True, null=True)
+    food_name = models.CharField(max_length=255, blank=True, null=True)
+    name = models.CharField(max_length=255, blank=True, null=True)
+    address = models.CharField(max_length=255,blank=True, null=True)
+    count = models.CharField(max_length=255, blank=True, null=True)
+
+
+class CctvTable(models.Model):
+    label =  models.CharField(max_length=255, blank=True, null=True)
+    address = models.CharField(max_length=255,blank=True, null=True)
+    count = models.CharField(max_length=255, blank=True, null=True)
+
+
+class streetTable(models.Model):
+    address = models.CharField(max_length=255,blank=True, null=True)
+    count = models.CharField(max_length=255, blank=True, null=True)
+    time =  models.CharField(max_length=255, blank=True, null=True)
+

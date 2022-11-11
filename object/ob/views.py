@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import Http404
-from .models import Question, ShopList, SeoulTable
+from .models import Question, ShopList, SeoulTable, streetTable
 import json
-
+from django.core.serializers.json import DjangoJSONEncoder
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:1]
     context = {'latest_question_list': latest_question_list}
@@ -29,4 +29,5 @@ def map(request):
     return render(request,'ob/map.html',{'seoul':seoul})
 
 def Dashborad(request):
-    return render(request,'ob/Dash/index.html')
+    rest = streetTable.objects.order_by('-id')
+    return render(request,'ob/Dash/index.html',{'rest' : rest})
