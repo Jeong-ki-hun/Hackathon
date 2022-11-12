@@ -14,7 +14,7 @@ cur = con.cursor()
 
 
 for i in range(100,300):
-    time.sleep(3)
+    time.sleep(1)
     now = datetime.datetime.now()
     all = [i,now]
     sql = sql = "INSERT INTO ob_question (question_text, pub_date) VALUES(%s,%s)"
