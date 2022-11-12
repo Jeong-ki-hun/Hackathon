@@ -120,27 +120,15 @@ class DjangoSession(models.Model):
         db_table = 'django_session'
 
 
-class MusinsaTable(models.Model):
-    brand = models.CharField(max_length=255, blank=True, null=True)
-    title = models.CharField(max_length=255, blank=True, null=True)
-    price = models.CharField(max_length=255, blank=True, null=True)
-    riview = models.CharField(max_length=255, blank=True, null=True)
-    wishlist = models.CharField(max_length=255, blank=True, null=True)
-    link = models.CharField(max_length=255, blank=True, null=True)
-    color = models.CharField(max_length=255, blank=True, null=True)
+class ObCctvtable(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    label = models.CharField(max_length=255, blank=True, null=True)
+    address = models.CharField(max_length=255, blank=True, null=True)
+    count = models.CharField(max_length=255, blank=True, null=True)
 
     class Meta:
         managed = False
-        db_table = 'musinsa_table'
-
-
-class ObList(models.Model):
-    name = models.CharField(max_length=200)
-    status = models.CharField(max_length=200)
-
-    class Meta:
-        managed = False
-        db_table = 'ob_list'
+        db_table = 'ob_cctvtable'
 
 
 class Question(models.Model):
@@ -153,17 +141,31 @@ class Question(models.Model):
         db_table = 'ob_question'
 
 
-class ShopList(models.Model):
-    id = models.IntegerField(primary_key=True)
+class ObResttable(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    label = models.CharField(max_length=255, blank=True, null=True)
     name = models.CharField(max_length=255, blank=True, null=True)
-    link = models.CharField(max_length=255, blank=True, null=True)
-    text = models.TextField()
+    address = models.CharField(max_length=255, blank=True, null=True)
+    count = models.IntegerField()
+    food_name = models.CharField(max_length=255, blank=True, null=True)
+    image = models.TextField()
     status = models.CharField(max_length=255, blank=True, null=True)
-    image_url = models.TextField()
 
     class Meta:
         managed = False
-        db_table = 'shop_list'
+        db_table = 'ob_resttable'
+
+
+class ObStreettable(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    address = models.CharField(max_length=255, blank=True, null=True)
+    count = models.CharField(max_length=255, blank=True, null=True)
+    time = models.CharField(max_length=255, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'ob_streettable'
+
 
 class SeoulTable(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True)
