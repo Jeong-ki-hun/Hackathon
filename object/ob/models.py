@@ -193,3 +193,15 @@ class streetTable(models.Model):
     count = models.CharField(max_length=255, blank=True, null=True)
     time =  models.CharField(max_length=255, blank=True, null=True)
 
+class ObResttable(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    label = models.CharField(max_length=255, blank=True, null=True)
+    name = models.CharField(max_length=255, blank=True, null=True)
+    address = models.CharField(max_length=255, blank=True, null=True)
+    count = models.IntegerField()
+    food_name = models.CharField(max_length=255, blank=True, null=True)
+    image = models.TextField()
+    status = models.CharField(max_length=255, blank=True, null=True)
+    class Meta:
+        managed = False
+        db_table = 'ob_resttable'
