@@ -4,12 +4,20 @@ from .models import Question, ShopList, SeoulTable, streetTable, ObResttable
 import json
 from django.core.serializers.json import DjangoJSONEncoder
 from django.core.paginator import Paginator
+
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:1]
     context = {'latest_question_list': latest_question_list}
     return render(request, 'ob/index_5.html', context)
 
 def shop_list(request):
+    if request.method=="POST":
+        searched = request.POST['search']
+        data = ObResttable.objects.filter(name__contains=searched)
+        page = request.POST.get('page', '1')
+        paginator = Paginator(data, '10')
+        page_obj = paginator.page(page)
+        return render(request, 'ob/index_3.html', {'page_obj' : page_obj})
     data = ObResttable.objects.all()
     page = request.GET.get('page', '1') #GET 방식으로 정보를 받아오는 데이터
     paginator = Paginator(data, '10') #Paginator(분할될 객체, 페이지 당 담길 객체수)
